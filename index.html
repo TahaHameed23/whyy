@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHYY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config ={
+            theme: {
+      extend: {
+        keyframes: {
+          dropin: {
+            "0%": { opacity: '0' },
+            "1%": { transform: 'translateY(-10px)' },
+            "80%": { opacity: '1' },
+            "100%": { transform: 'translate(0px)' },
+  
+          },
+          fadein: {
+            "0%": { opacity: '0' },
+            "100%": { opacity: '1' },
+          },
+        },
+        animation: {
+          "slide": "dropin 1s ease 200ms backwards",
+          "slide2": "dropin 1200ms ease 500ms backwards",
+  
+          "fade": "fadein 1s ease 200ms backwards",
+      },
+      plugins: [],
+    }
+  }
+        }
+    </script>
+</head>
+<body class="bg-[#110e1d] text-white">
+    <nav class="sticky max-w-screen top-0 z-10 bg-[rgba(109,147,114,255)] h-18 px-4">
+        <div class="flex justify-between text-center  py-4">
+            <div class="font-extrabold lg:text-3xl text-2xl mx-3 ">
+                WHYY
+            </div>
+            <div class="flex justify-between">
+                <a href="#download">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path d="M4 19H20V12H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V12H4V19ZM14 9H19L12 16L5 9H10V3H14V9Z" fill="rgba(255,255,255,1)"></path></svg>
+                </a>
+        </div>
+            
+    </nav>
+    
+    <section class="lg:mx-1 my-[3rem] mx-3">
+        <div class="flex justify-center">
+            <img src="./assets/logo.jpg" alt="" class="w-56 h-56 animate-slide">
+        </div>
+        
+        <div class="text-center my-8 lg:text-5xl text-3xl animate-fade">
+            Chat, Share, Connect: <br> Your <span class="text-green-700">World</span>, Your <span class="text-green-700">Words</span>! <br>        
+        </div>
+        <div class="text-center animate-slide2 font-semibold text-2xl mt-12 lg:mt-4">
+            Redfining the way you chat, share & connect. <br>
+            Giving you the freedom to express yourself. <br>
+        </div>
+    </section>
+
+    <section class="my-36" id="download">
+        <div class="flex justify-center">
+            <img src="./assets/en_badge_web_generic.png" alt=""  class="w-72">
+        </div>
+        <div class="text-center text-2xl mb-4">
+            OR
+        </div>
+        <div class="flex px-10 py-6 cursor-pointer bg-slate-600 w-fit mx-auto rounded-lg hover:opacity-90 shadow-md duration-300 hover:shadow-green-600">
+            <div class="cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path d="M4 19H20V12H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V12H4V19ZM14 9H19L12 16L5 9H10V3H14V9Z" fill="rgba(27,142,78,1)"></path></svg>
+            </div>
+            <button class="mx-4" >Download APK</button>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-700 py-2">
+        <div class="text-center font-medium text-lg">
+            Chat smart, chat together.
+
+        </div>
+        <div class="bottom-0 items-center grid grid-cols-2 px-4 py-5 gap-28 lg:gap-x-[40rem] whitespace-nowrap  lg:px-24">
+
+            <div class="">
+                <div>
+                    <div>
+                    
+                    </div>
+                    <input type="text" class="rounded-full p-2 my-4 mr-4 lg:w-[30rem] md:w-[22rem] outline-none text-black" placeholder="Get in touch">
+                </div>
+                <button class="bg-green-900 px-4 py-1 hover:bg-green-600  rounded-lg">Send</button>
+            </div> 
+            <div>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>Open Source</li>
+                </ul>
+            </div>
+           
+
+        </div>
+    </footer>
+</body>
+</html>
